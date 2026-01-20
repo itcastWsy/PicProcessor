@@ -17,7 +17,7 @@ export function Footer() {
           </a>
         </div>
         
-        <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 text-xs">
+        {/* <div className="flex hi flex-col md:flex-row items-center gap-2 md:gap-4 text-xs">
           <a 
             href="https://beian.miit.gov.cn/" 
             target="_blank" 
@@ -31,10 +31,9 @@ export function Footer() {
             href="#" 
             className="hover:text-slate-900 dark:hover:text-slate-300 transition-colors flex items-center gap-1"
           >
-            {/* 公安备案图标通常在这里，可以用一个占位符或图片 */}
             <span>公网安备 XXXXXXXXXXXXXX号 (可选)</span>
           </a>
-        </div>
+        </div> */}
       </div>
     </footer>
   )
