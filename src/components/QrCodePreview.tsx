@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { cn } from '@/lib/utils'
 
 interface QrCodePreviewProps {
@@ -9,13 +9,6 @@ interface QrCodePreviewProps {
 
 export function QrCodePreview({ src, alt, label }: QrCodePreviewProps) {
   const [isHovered, setIsHovered] = useState(false)
-  const [isVisible, setIsVisible] = useState(false)
-
-  // Use effect to handle mounting/unmounting delay if we wanted to strictly remove from DOM,
-  // but for pure CSS transition, keeping it in DOM is easier. 
-  // However, keeping large images in DOM might be heavy? 
-  // No, 2 images is fine. 
-  // Let's use simple CSS class toggle.
 
   return (
     <div 

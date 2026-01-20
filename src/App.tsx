@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from 'react'
+import { useState, useCallback } from 'react'
 import { UploadZone } from '@/components/UploadZone'
 import { SettingsPanel } from '@/components/SettingsPanel'
 import { ImageList } from '@/components/ImageList'
@@ -11,6 +11,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { QrCodePreview } from '@/components/QrCodePreview'
 import { ThemeToggle } from '@/components/ThemeToggle'
+import { Footer } from '@/components/Footer'
 
 function App() {
   const [files, setFiles] = useState<ImageFile[]>([])
@@ -22,13 +23,6 @@ function App() {
     height: '',
     maintainAspectRatio: true
   })
-
-  // Cleanup object URLs
-  useEffect(() => {
-    return () => {
-      files.forEach(f => URL.revokeObjectURL(f.preview))
-    }
-  }, [])
 
   const handleFilesSelected = useCallback(async (newFiles: File[]) => {
     // Initialize files immediately to show in UI
@@ -223,6 +217,8 @@ function App() {
           </div>
         </div>
       </main>
+
+      <Footer />
     </div>
   )
 }

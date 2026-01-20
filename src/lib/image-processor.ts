@@ -1,5 +1,3 @@
-import imageCompression from 'browser-image-compression';
-
 export type OutputFormat = 'image/jpeg' | 'image/png' | 'image/webp';
 
 export interface ProcessOptions {
